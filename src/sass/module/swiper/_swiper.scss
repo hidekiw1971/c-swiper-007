@@ -1,0 +1,135 @@
+@use "global" as *;
+.swiper.mySwiper1 {
+  min-width: rem(375);
+  width: 100%;
+  height: rem(770);
+  @include mq(md) {
+    max-width: rem(1280);
+    width: 100%;
+    height: rem(851);
+  }
+  @include mq(xl) {
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// 画像の比率調整
+// mySwiper1__slide
+.swiper-slide.mySwiper1__slide {
+  display: block;
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+.swiper-slide.mySwiper1__slide::before {
+  content: "";
+  display: block;
+  padding-top: 205.33%;
+  width: 100%;
+  background-color: #ff7f50;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+// 画像設定
+.mySwiper1__img1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/MV1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+.mySwiper1__img2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/mv2@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+.mySwiper1__img3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/MV3@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md) {
+  }
+  @include mq(xl) {
+  }
+}
+
+// animation
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img,
+.swiper-slide.mySwiper1__slide {
+  animation: zoomUp 10s linear 0s 1 normal both;
+  animation-iteration-count: infinite;
+}
+.slide-img img {
+  display: block;
+}
