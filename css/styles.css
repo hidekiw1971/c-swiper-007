@@ -279,17 +279,20 @@ select::-ms-expand {
             transform: scale(1.15);
   }
 }
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img,
-.swiper-slide.mySwiper1__slide {
-  -webkit-animation: zoomUp 10s linear 0s 1 normal both;
-          animation: zoomUp 10s linear 0s 1 normal both;
+.mySwiper1__slide {
+  -webkit-animation: zoomUp 30s;
+          animation: zoomUp 30s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 
-.slide-img img {
-  display: block;
+.swiper-wrapper .swiper-slide {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 /*# sourceMappingURL=styles.css.map */

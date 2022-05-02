@@ -3,6 +3,7 @@
   min-width: rem(375);
   width: 100%;
   height: rem(770);
+
   @include mq(md) {
     max-width: rem(1280);
     width: 100%;
@@ -123,13 +124,22 @@
   }
 }
 
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img,
-.swiper-slide.mySwiper1__slide {
-  animation: zoomUp 10s linear 0s 1 normal both;
+// .swiper-slide-active .slide-img,
+// .swiper-slide-duplicate-active .slide-img,
+// .swiper-slide-prev .slide-img,
+// .swiper-slide.mySwiper1__slide {
+.mySwiper1__slide {
+  // animation: zoomUp 10s linear 0s 1 normal both;
+  animation: zoomUp 30s;
   animation-iteration-count: infinite;
 }
-.slide-img img {
-  display: block;
+
+.swiper-wrapper .swiper-slide {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; //全画面表示
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
